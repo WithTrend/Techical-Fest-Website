@@ -1,0 +1,76 @@
+/* Contact.css */
+.contact-section {
+    padding: 60px;
+    background-color: #f0f4f8;
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    color:#54a1b5; 
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .member-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .member-card h3 {
+    color: #54a1b5;
+    font-size: 1.8rem; /* Larger font for the name */
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .member-card .role {
+    font-size: 1.3rem;
+    color: #3b70aa; /* Blue color for the role */
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .member-card p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  .member-card p strong {
+    color: #333;
+  }
+  
+  .card-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  @media (max-width: 768px) {
+    .member-card {
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+  }
+  

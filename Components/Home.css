@@ -1,0 +1,119 @@
+/* Home.css */
+.home-container {
+    font-family: 'Helvetica', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f0f0, #e2e2e2); /* Elegant, soft gradient */
+    color: #333;
+    overflow: hidden;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .content-wrapper {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2ecc71; /* Elegant green */
+    margin-bottom: 15px;
+  }
+  
+  .hero-subheading {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    background-color: #3498db; /* Soft blue */
+    color: white;
+    font-size: 1rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.05);
+    background-color: #2980b9; /* Darker blue on hover */
+  }
+  
+  /* UFO Animation */
+  .ufo-container {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .ufo {
+    width: 200px;
+    height: 120px;
+    position: relative;
+    animation: ufoLanding 5s ease-in-out infinite;
+  }
+  
+  .ufo-top {
+    width: 100%;
+    height: 50px;
+    background-color: #2ecc71; /* UFO top color */
+    border-radius: 50% 50% 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .ufo-body {
+    width: 100%;
+    height: 60px;
+    background-color: #3498db; /* UFO body color */
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+  }
+  
+  /* UFO Animation */
+  @keyframes ufoLanding {
+    0% {
+      transform: translateY(-350px); /* Start above the screen */
+    }
+    50% {
+      transform: translateY(0); /* Landing position */
+    }
+    100% {
+      transform: translateY(-350px); /* Return to starting position */
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
