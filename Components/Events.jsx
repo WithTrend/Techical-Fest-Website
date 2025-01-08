@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./events.css";
+import "./Events.css";
 
 const eventDetails = {
   events: {
