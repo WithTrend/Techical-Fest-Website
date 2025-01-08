@@ -60,6 +60,7 @@ body {
   font-size: 24px;
   color: white;
   cursor: pointer;
+  
 }
 .footer {
   background-color: #3498db;
@@ -83,6 +84,7 @@ body {
   .burger-menu {
     display: block;
   }
+  
 
   .nav-menu {
     display: none;
@@ -124,6 +126,7 @@ body {
   .header-title {
     font-size: 18px;
   }
+  
 
   .nav-menu a {
     font-size: 12px;

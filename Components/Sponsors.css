@@ -160,9 +160,9 @@
   }
 
   .sponsor-card {
-    width: 80vw; /* 80% of the viewport width */
+    width: 70%; /* 80% of the viewport width */
     height: auto; /* Maintain aspect ratio */
-    margin: 10px 0;
+    margin-inline: auto;
   }
 
   .carousel-button, .pagination {
@@ -189,8 +189,9 @@
   }
 
   .sponsor-card {
-    width: 80vw;
+    width: 70%;
     height: auto;
+    margin-inline: auto;
   }
 
   .carousel-button, .pagination {
@@ -222,8 +223,9 @@
   }
 
   .sponsor-card {
-    width: 80vw; /* 80% of the viewport width */
+    width: 70%; /* 80% of the viewport width */
     height: auto;
+    margin-inline: auto;
   }
 
   .carousel-button, .pagination {
