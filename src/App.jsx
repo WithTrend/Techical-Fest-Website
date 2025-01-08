@@ -1,33 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, Outlet } from "react-router";
 import "./App.css";
-// import logo from "./logo.jpg";
 
 export const App = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <>
       <header className="header">
-        {/* <img src={""} alt="Logo" className="logo" /> */}
         <h1 className="header-title">EFFulgence</h1>
-        <nav className="nav-menu">
+        <button className="burger-menu" onClick={toggleMenu}>
+          ☰
+        </button>
+        <nav className={`nav-menu ${menuOpen ? "open" : ""}`}>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={() => setMenuOpen(false)}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/events">Events</Link>
+              <Link to="/events" onClick={() => setMenuOpen(false)}>
+                Events
+              </Link>
             </li>
             <li>
-              <Link to="/sponsors">Sponsors</Link>
+              <Link to="/sponsors" onClick={() => setMenuOpen(false)}>
+                Sponsors
+              </Link>
             </li>
             <li>
-              <Link to="/speakers">Speakers</Link>
+              <Link to="/speakers" onClick={() => setMenuOpen(false)}>
+                Speakers
+              </Link>
             </li>
             <li>
-              <Link to="/campusAmbassadors">Campus Ambassadors</Link>
+              <Link to="/campusAmbassadors" onClick={() => setMenuOpen(false)}>
+                Campus Ambassadors
+              </Link>
             </li>
             <li>
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact" onClick={() => setMenuOpen(false)}>
+                Contact Us
+              </Link>
             </li>
           </ul>
         </nav>
