@@ -11,7 +11,7 @@ export const Home = () => {
   return (
     <div
       className="home-container"
-      style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}
+      style={{ position: "relative", minHeight: "100%", overflow: "hidden" }}
     >
       {/* Particle Animation */}
       <Particles
@@ -46,8 +46,8 @@ export const Home = () => {
             line_linked: {
               enable: true,
               distance: 150,
-              color: "#ffffff",
-              opacity: 0.4,
+              color: "#4a6589",
+              opacity: 0.2,
               width: 1,
             },
           },
