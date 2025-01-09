@@ -9,38 +9,33 @@ export const Home = () => {
   };
 
   return (
-    <div className="home-container">
+    <div
+      className="home-container"
+      style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}
+    >
+      {/* Particle Animation */}
       <Particles
         id="tsparticles"
         init={particlesInit}
         options={{
-          background: {
-            color: "linear-gradient(135deg, #3498db, #2ecc71)", // Matches header and footer gradient
-          },
+          fullScreen: { enable: true }, // Ensures particles stay within the div
           particles: {
-            number: { value: 120, density: { enable: true, value_area: 800 } },
-            color: { value: ["#3498db", "#2ecc71", "#ffffff"] },
+            number: { value: 150, density: { enable: true, value_area: 800 } },
+            color: { value: ["#3498db", "#2ecc71", "#000000"] }, // Gradient-aligned colors
             shape: { type: "circle" },
             opacity: {
-              value: 0.7,
+              value: 0.8,
               random: true,
-              anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false },
+              anim: { enable: true, speed: 1, opacity_min: 0.3, sync: false },
             },
             size: {
-              value: 4,
+              value: 5,
               random: true,
-              anim: { enable: true, speed: 3, size_min: 0.1, sync: false },
-            },
-            line_linked: {
-              enable: true,
-              distance: 150,
-              color: "#3a5d8a",
-              opacity: 0.4,
-              width: 1,
+              anim: { enable: true, speed: 2, size_min: 0.5, sync: false },
             },
             move: {
               enable: true,
-              speed: 2,
+              speed: 1.5,
               direction: "none",
               random: false,
               straight: false,
@@ -48,38 +43,22 @@ export const Home = () => {
               bounce: false,
               attract: { enable: true, rotateX: 600, rotateY: 1200 },
             },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#ffffff",
+              opacity: 0.4,
+              width: 1,
+            },
           },
           interactivity: {
-            detect_on: "canvas",
             events: {
-              onhover: {
-                enable: true,
-                mode: "bubble", // Creates a bubble effect
-              },
-              onclick: {
-                enable: true,
-                mode: "repulse", // Repulses particles on click
-              },
-              resize: true,
+              onhover: { enable: true, mode: "grab" }, // Grab effect on hover
+              onclick: { enable: true, mode: "push" }, // Push new particles on click
             },
             modes: {
-              bubble: {
-                distance: 200,
-                size: 8,
-                duration: 2,
-                opacity: 0.8,
-                speed: 3,
-              },
-              repulse: {
-                distance: 100,
-                duration: 0.4,
-              },
-              push: {
-                particles_nb: 4,
-              },
-              remove: {
-                particles_nb: 2,
-              },
+              grab: { distance: 200, line_linked: { opacity: 0.5 } },
+              push: { particles_nb: 4 },
             },
           },
           retina_detect: true,
