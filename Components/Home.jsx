@@ -11,7 +11,7 @@ export const Home = () => {
   return (
     <div
       className="home-container"
-      style={{ position: "relative", minHeight: "100%", overflow: "hidden" }}
+      style={{ position: "relative", minHeight: "90vh", overflow: "hidden" }}
     >
       {/* Particle Animation */}
       <Particles
