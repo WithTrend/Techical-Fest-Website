@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router";
+import { useAuth } from "../Context/AuthContext";
 import "./App.css";
 
 export const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { user, logout } = useAuth();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -48,6 +50,33 @@ export const App = () => {
                 Contact Us
               </Link>
             </li>
+            {user ? (
+              <>
+                <li>
+                  <Link to="/profile" onClick={() => setMenuOpen(false)}>
+                    {user.name}'s Profile
+                  </Link>
+                </li>
+                <li>
+                  <button onClick={logout} className="logout-btn">
+                    Logout
+                  </button>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link to="/register" onClick={() => setMenuOpen(false)}>
+                    Register
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/login" onClick={() => setMenuOpen(false)}>
+                    Login
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </nav>
       </header>

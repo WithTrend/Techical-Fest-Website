@@ -1,0 +1,77 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .register-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    animation: slideIn 0.6s ease-out;
+  }
+  
+  .register-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .register-label {
+    display: block;
+    margin-bottom: 15px;
+    color: #34495e;
+    font-weight: 500;
+  }
+  
+  .register-label input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .register-label input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  
+  .register-button {
+    width: 100%;
+    padding: 10px;
+    background: #2ecc71;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background: #27ae60;
+    box-shadow: 0 5px 10px rgba(39, 174, 96, 0.4);
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

@@ -6,6 +6,16 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
+  /* background-image: url('./EffulgenceLogo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  opacity: 0.9;
+  z-index: -999; */
+  
+
+
 }
 
 .header {
